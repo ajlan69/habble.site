@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thalassery Table — Kerala Kitchen, Kozhikode | Demo</title>
-<meta name="description" content="Kerala restaurant in Kozhikode. Table-QR menu with order-over-WhatsApp. WYNEX demo.">
-<link rel="canonical" href="https://ajlan69.github.io/wynex/demos/restaurant/">
+<meta name="description" content="Kerala restaurant in Kozhikode. Table-QR menu with order-over-WhatsApp. HABBLE demo.">
+<link rel="canonical" href="https://habble.site/demos/restaurant/">
 <meta name="theme-color" content="#171208">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Thalassery Table — Kerala Kitchen, Kozhikode">
-<meta property="og:description" content="Scan, pick, order on WhatsApp. WYNEX demo for restaurants.">
-<meta property="og:url" content="https://ajlan69.github.io/wynex/demos/restaurant/">
-<meta property="og:image" content="https://ajlan69.github.io/wynex/assets/img/demo-restaurant.svg">
+<meta property="og:description" content="Scan, pick, order on WhatsApp. HABBLE demo for restaurants.">
+<meta property="og:url" content="https://habble.site/demos/restaurant/">
+<meta property="og:image" content="https://habble.site/assets/img/demo-restaurant.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -71,7 +71,7 @@ footer{padding:26px 0 110px;color:var(--muted);font-size:.76rem;display:flex;jus
 </div>
 <div class="bar"><div><b id="count">0 items · ₹0</b><small>Table 7 · order goes to kitchen WhatsApp</small></div><button class="order" onclick="sendOrder()">Send order →</button></div>
 <div class="info"><div><b>Hours</b>11am–3:30pm meals<br>4–11pm full menu</div><div><b>Bulk &amp; party</b>Sadhya from ₹150/plate.<br><a href="https://wa.me/910000000000" style="color:var(--amber2)">Quote on WhatsApp →</a></div><div><b>Find us</b>SM Street, Kozhikode<br><a href="tel:+910000000000" style="color:var(--amber2)">Call the counter →</a></div></div>
-<footer><span>© 2026 Thalassery Table · Demo persona for illustration</span><span>Demo by WYNEX · Orders via WhatsApp</span></footer>
+<footer><span>© 2026 Thalassery Table · Demo persona for illustration</span><span>Demo by HABBLE · Orders via WhatsApp</span></footer>
 </div>
 <script>
 var cart={};
@@ -80,8 +80,8 @@ document.querySelectorAll('.cats button').forEach(function(b){b.addEventListener
 function render(){var n=0,t=0;for(var k in cart){n+=cart[k].q;t+=cart[k].q*cart[k].p}document.getElementById('count').textContent=n+' item'+(n===1?'':'s')+' · ₹'+t;}
 function sendOrder(){var keys=Object.keys(cart);if(!keys.length){alert('Add something first — try the biryani.');return}var lines=keys.map(function(k){return '• '+k+' × '+cart[k].q+' (₹'+(cart[k].q*cart[k].p)+')'});var total=keys.reduce(function(s,k){return s+cart[k].q*cart[k].p},0);window.open('https://wa.me/910000000000?text='+encodeURIComponent('Hi! Table 7 order:\n'+lines.join('\n')+'\nTotal: ₹'+total),'_blank');}
 </script>
-<!-- Made by WYNEX — backlink badge (keep on every demo) -->
-<a class="wynex-badge" href="../../#examples" aria-label="Back to WYNEX demos">Made by WYNEX <span aria-hidden="true">→</span></a>
-<style>.wynex-badge{position:fixed;right:16px;bottom:16px;z-index:9000;display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:100px;background:rgba(255,247,232,.94);color:#231603;font:600 12px/1.4 Inter,system-ui,sans-serif;text-decoration:none;border:1px solid rgba(0,0,0,.1)}</style>
+<!-- Made by HABBLE — backlink badge (keep on every demo) -->
+<a class="habble-badge" href="../../#examples" aria-label="Back to HABBLE demos">Made by HABBLE <span aria-hidden="true">→</span></a>
+<style>.habble-badge{position:fixed;right:16px;bottom:16px;z-index:9000;display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:100px;background:rgba(255,247,232,.94);color:#231603;font:600 12px/1.4 Inter,system-ui,sans-serif;text-decoration:none;border:1px solid rgba(0,0,0,.1)}</style>
 </body>
 </html>

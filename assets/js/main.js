@@ -1,4 +1,4 @@
-/* WYNEX — slim interactions. Vanilla, no deps. Works without JS (native details, plain links). */
+/* HABBLE — slim interactions. Vanilla, no deps. Works without JS (native details, plain links). */
 (function () {
   'use strict';
   var $ = function (s, c) { return (c || document).querySelector(s); };
@@ -16,12 +16,12 @@
     if (themeMeta) themeMeta.setAttribute('content', t === 'dark' ? '#0d0d10' : '#faf9f5');
   }
   var saved = null;
-  try { saved = localStorage.getItem('wynex-theme'); } catch (e) { saved = null; }
+  try { saved = localStorage.getItem('habble-theme'); } catch (e) { saved = null; }
   paintTheme(saved === 'dark' ? 'dark' : 'light');
   $$('[data-theme-set]').forEach(function (b) {
     b.addEventListener('click', function () {
       var t = b.getAttribute('data-theme-set');
-      try { localStorage.setItem('wynex-theme', t); } catch (e) { /* private mode */ }
+      try { localStorage.setItem('habble-theme', t); } catch (e) { /* private mode */ }
       paintTheme(t);
     });
   });

@@ -1,4 +1,4 @@
-﻿WYNEX portfolio-business landing page
+﻿HABBLE portfolio-business landing page
 
 How to use:
 1. Open index.html in a browser.
@@ -8,7 +8,7 @@ How to use:
 5. Upload index.html to Netlify, Vercel, GitHub Pages, or your preferred host.
 
 Brand and contact details:
-- Name: WYNEX
+- Name: HABBLE
 - WhatsApp: +91 62387 12579  (link uses wa.me/916238712579)
 - Email: ajlanabduljlaeel@gmail.com
 

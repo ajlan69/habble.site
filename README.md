@@ -1,13 +1,19 @@
-﻿# WYNEX — portfolio-business website
+﻿# HABBLE — portfolio-business website
 
-Static site. HTML, CSS and vanilla JS only: no build step, no framework, no
-runtime dependency, no tracking. Deploys as-is to GitHub Pages or Cloudflare
-Pages.
+Live site: https://habble.site/
+Source: https://github.com/ajlan69/habble
+
+Static site built with vanilla JavaScript, HTML5, and CSS3. No frameworks,
+no build tools, no runtime dependencies, no tracking. Deploys as-is to
+GitHub Pages or Cloudflare Pages.
+
+Tech: JavaScript · HTML5 · CSS3 · GitHub Pages
 
 ## Files
 
 ```
 index.html              the whole page
+app.js                  small vanilla-JS enhancements (footer live clock, year fallback)
 terms.html              terms of service
 privacy.html            privacy policy
 404.html                not-found page (used by both hosts automatically)
@@ -40,9 +46,24 @@ each with a Malayalam subtitle and its own prefilled WhatsApp link),
 maintenance add-on), `#ownership`, `#trust`, `#faq` (10 questions), `#contact`.
 
 File structure stays as-is (`index.html` + `assets/css/style.css` +
-`assets/js/main.js` + `assets/`): moving CSS/JS to the root would break every
+`assets/js/main.js` + `app.js` + `assets/`): CSS/JS live in external files,
+never inline (except the pre-paint theme snippet and JSON-LD data, which must
+stay inline). Moving the asset-folder files to the root would break every
 existing link, deploy and the demos' backlink badges, so the "simple structure"
 rule is met by keeping paths stable instead.
+
+## JavaScript features (vanilla, no libraries)
+
+- `assets/js/main.js` — sticky header, scroll-spy active nav (`aria-current`),
+  mobile nav toggle, scroll reveal (`IntersectionObserver`), theme toggle
+  (light/dark, remembered in `localStorage`), footer year.
+- `app.js` — footer live clock (`#live-clock`, updates every second) + year
+  fallback. Loaded via `<script src="app.js" defer></script>`.
+- `index.html` carries a visible `// tech stack` section (vanilla JavaScript,
+  HTML5, CSS3, GitHub Pages badges) and a footer `View source on GitHub` link
+  to https://github.com/ajlan69/habble.
+- All interactive features degrade gracefully with JavaScript disabled
+  (native `<details>` FAQ, plain links, CSS smooth-scroll fallback).
 
 ## Before you publish: edit these
 
@@ -53,13 +74,13 @@ appear in several places, and each occurrence in the HTML carries an
 | What | Where | Current value |
 | --- | --- | --- |
 | WhatsApp number | every `wa.me/` link, `tel:` link | `+91 62387 12579` / `916238712579` |
-| UPI ID | pricing links, contact card, `main.js` `CONTACT.upi` | `ajlanwynex@upi` |
-| Instagram handle | contact card | `@wynex.studio` |
+| UPI ID | pricing links, contact card, `main.js` `CONTACT.upi` | `ajlanhabble@upi` |
+| Instagram handle | contact card | `@habble.studio` |
 | Email address | contact card, footer, terms, privacy | `ajlanabduljlaeel@gmail.com` |
 
 Also replace:
 
-- **The client reviews in `#proof` are an empty shell on purpose.** WYNEX has no
+- **The client reviews in `#proof` are an empty shell on purpose.** HABBLE has no
   reviews yet, so the three cards are visibly marked `Placeholder — do not
   publish`, with dashed borders and unfilled stars. Fill in a card only with a
   review a real client actually sent, using their real name, and switch
@@ -75,14 +96,14 @@ Also replace:
   is still `Coming soon`. There is one external live demo
   (`adeela.vercel.app`) above them. The instructions for adding a demo are in
   the comment above `<ul class="demos">`. Every demo page carries a
-  `Made by WYNEX` badge linking back to `../../#examples` — keep it on
+  `Made by HABBLE` badge linking back to `../../#examples` — keep it on
   every new demo. To re-capture a preview after editing a demo:
   ```powershell
   & "C:\Program Files\Google\Chrome\Application\chrome.exe" --headless=new `
     --disable-gpu --hide-scrollbars --window-size=1280,960 `
     --virtual-time-budget=8000 `
     --screenshot="$env:TEMP\shot-<slug>.png" `
-    "file:///D:/project/WYNEX/demos/<slug>/index.html"
+    "file:///D:/project/HABBLE/demos/<slug>/index.html"
   python3 -c "from PIL import Image; im=Image.open(r'$env:TEMP\shot-<slug>.png').convert('RGB').resize((960,720)); im.save(r'assets\img\demo-<slug>.webp','WEBP',quality=72)"
   ```
 - **The niche cards in `#examples`.** Salon, clinic, restaurant and shop are
@@ -111,7 +132,7 @@ and keep the two in agreement with `terms.html`.
 Each plan has a UPI deep link:
 
 ```
-upi://pay?pa=<UPI_ID>&pn=WYNEX&am=<AMOUNT>&cu=INR&tn=<NOTE>
+upi://pay?pa=<UPI_ID>&pn=HABBLE&am=<AMOUNT>&cu=INR&tn=<NOTE>
 ```
 
 A `upi://` link silently does nothing in a desktop browser, so the page ships in
@@ -135,7 +156,7 @@ disabled:
 
 - WhatsApp `+91 62387 12579` (primary, every CTA on the page)
 - Phone `tel:+916238712579`
-- Instagram `@wynex.studio`
+- Instagram `@habble.studio`
 - Email `ajlanabduljlaeel@gmail.com`
 
 If you later want a real form, add a hosted endpoint that actually accepts
@@ -145,16 +166,16 @@ channels above as the fallback. Never point a form at a URL you have not tested.
 ## Hosting note (already in the pricing section and FAQ)
 
 > Domain is purchased by client in their own name. Hosting: we set up on your
-> Cloudflare account; if you don't have one, we can host on WYNEX Cloudflare
+> Cloudflare account; if you don't have one, we can host on HABBLE Cloudflare
 > with a written agreement.
 
 ## Deploy
 
-**GitHub Pages** — the repo is already `ajlan69/wynex`. Settings → Pages →
+**GitHub Pages** — the repo is already `ajlan69/habble`. Settings → Pages →
 Deploy from a branch → `main` / `/ (root)`. The site is then at
-`https://ajlan69.github.io/wynex/`, which is already the canonical URL in
+`https://habble.site/`, which is already the canonical URL in
 `index.html`, `robots.txt` and `sitemap.xml`. Workflow files at
-`https://ajlan69.github.io/wynex/.github/workflows/pages.yml` take precedence
+`https://habble.site/.github/workflows/pages.yml` take precedence
 over the branch setting, so push to `main` and let the workflow publish.
 
 **Cloudflare Pages** — Workers & Pages → Create → Pages → Upload assets.
@@ -207,5 +228,5 @@ Nothing needs compiling, so both hosts work in "static, no build" mode.
 - The first-5-clients offer in `#proof` and `terms.html` §2a needs confirming.
 - The 50% advance amounts in the `upi://` links (`999.50`, `2499.50`, `4999.50`)
   assume those are the advances you want.
-- `sitemap.xml` and `robots.txt` point at `https://ajlan69.github.io/wynex/`.
+- `sitemap.xml` and `robots.txt` point at `https://habble.site/`.
   Update them if you move to a custom domain or Cloudflare Pages.

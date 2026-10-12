@@ -1,5 +1,5 @@
 /* ==========================================================================
-   WYNEX — dark premium bento system. No framework, no build step.
+   HABBLE — dark premium bento system. No framework, no build step.
    One accent. Cards do the talking. Short page, strong hierarchy.
    ========================================================================== */
 
@@ -233,6 +233,18 @@ body.nav-open{overflow:hidden}
 .foot-links a{padding:.5rem 0;color:var(--ink-2)}
 .foot-links a:hover{color:var(--glow)}
 .foot-copy{width:100%}
+.foot-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.2rem;width:100%;font-size:.8rem}
+.foot-clock{font-family:var(--ffm);font-size:.75rem;letter-spacing:.04em;color:var(--dim)}
+.foot-clock time{font-variant-numeric:tabular-nums;color:var(--ink-2)}
+
+/* ---------- tech stack (js.org credibility) ---------- */
+.stack{border-top:1px solid var(--line)}
+.stack-inner{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 2rem;padding-block:1.6rem}
+.stack-copy{flex:1 1 260px;min-width:min(100%,260px)}
+.stack-copy .kicker{margin-bottom:.4rem}
+.stack-copy p{color:var(--muted);font-size:.9rem;max-width:46ch}
+.badges{display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0;list-style:none}
+.badges li{font-family:var(--ffm);font-size:.72rem;letter-spacing:.06em;border:1px solid var(--line-2);border-radius:100px;padding:.4rem .8rem;background:var(--card);color:var(--ink-2)}
 
 /* ---------- sticky mobile bar + toast ---------- */
 .mbar{position:fixed;left:0;right:0;bottom:0;z-index:200;display:none;gap:.6rem;padding:.6rem .8rem calc(.6rem + env(safe-area-inset-bottom));background:var(--headbg);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-top:1px solid var(--line)}

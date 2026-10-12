@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FreshKart Daily — Grocery Store, Ernakulam | Demo</title>
-<meta name="description" content="Neighbourhood grocery store in Ernakulam. Products, prices and WhatsApp + UPI ordering. WYNEX demo.">
-<link rel="canonical" href="https://ajlan69.github.io/wynex/demos/shop/">
+<meta name="description" content="Neighbourhood grocery store in Ernakulam. Products, prices and WhatsApp + UPI ordering. HABBLE demo.">
+<link rel="canonical" href="https://habble.site/demos/shop/">
 <meta name="theme-color" content="#F2F7EF">
 <meta property="og:type" content="website">
 <meta property="og:title" content="FreshKart Daily — Grocery Store, Ernakulam">
-<meta property="og:description" content="Products and WhatsApp + UPI ordering, no commission. WYNEX demo for local shops.">
-<meta property="og:url" content="https://ajlan69.github.io/wynex/demos/shop/">
-<meta property="og:image" content="https://ajlan69.github.io/wynex/assets/img/demo-shop.svg">
+<meta property="og:description" content="Products and WhatsApp + UPI ordering, no commission. HABBLE demo for local shops.">
+<meta property="og:url" content="https://habble.site/demos/shop/">
+<meta property="og:image" content="https://habble.site/assets/img/demo-shop.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -78,7 +78,7 @@ footer{padding:24px 0 110px;color:var(--muted);font-size:.76rem;display:flex;jus
 </div>
 <div class="bar"><div><b id="tot">0 items · ₹0</b><div style="font-size:.75rem;opacity:.7">Pay by UPI on delivery · No minimum</div></div><button class="order" onclick="send()">Order on WhatsApp →</button></div>
 <div class="trust"><div><b>⏱ 45-min delivery</b>Within 4 km, 7am–9pm. Live status on WhatsApp.</div><div><b>💸 No commission prices</b>Shelf price = site price. Monthly list? Send once, repeat.</div><div><b>📍 Ernakulam</b>Convent Rd. Call +91 00000 00000 for bulk/rice bags.</div></div>
-<footer><span>© 2026 FreshKart Daily · Demo persona for illustration</span><span>Demo by WYNEX · Orders via WhatsApp + UPI</span></footer>
+<footer><span>© 2026 FreshKart Daily · Demo persona for illustration</span><span>Demo by HABBLE · Orders via WhatsApp + UPI</span></footer>
 </div>
 <script>
 var cart={};
@@ -88,8 +88,8 @@ function send(){var k=Object.keys(cart);if(!k.length){alert('Cart is empty — a
 function filter(){var q=document.getElementById('q').value.toLowerCase();document.querySelectorAll('.prod').forEach(function(p){p.style.display=p.dataset.n.toLowerCase().includes(q)?'flex':'none'})}
 document.querySelectorAll('.chips button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.chips button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');var f=b.dataset.f;document.querySelectorAll('.prod').forEach(function(p){p.style.display=(f==='all'||p.dataset.c===f)?'flex':'none'})})});
 </script>
-<!-- Made by WYNEX — backlink badge (keep on every demo) -->
-<a class="wynex-badge" href="../../#examples" aria-label="Back to WYNEX demos">Made by WYNEX <span aria-hidden="true">→</span></a>
-<style>.wynex-badge{position:fixed;right:16px;bottom:16px;z-index:9000;display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:100px;background:rgba(20,33,15,.92);color:#fff;font:500 12px/1.4 Inter,system-ui,sans-serif;text-decoration:none}</style>
+<!-- Made by HABBLE — backlink badge (keep on every demo) -->
+<a class="habble-badge" href="../../#examples" aria-label="Back to HABBLE demos">Made by HABBLE <span aria-hidden="true">→</span></a>
+<style>.habble-badge{position:fixed;right:16px;bottom:16px;z-index:9000;display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:100px;background:rgba(20,33,15,.92);color:#fff;font:500 12px/1.4 Inter,system-ui,sans-serif;text-decoration:none}</style>
 </body>
 </html>

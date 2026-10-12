@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ajlan69.github.io/wynex/sitemap.xml
+Sitemap: https://habble.site/sitemap.xml
