@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FreshKart Daily — Grocery Store, Ernakulam | Demo</title>
-<meta name="description" content="Neighbourhood grocery store in Ernakulam. Products, prices and WhatsApp + UPI ordering. HABBLE demo.">
+<meta name="description" content="Neighbourhood grocery store in Ernakulam. Products, prices and email ordering. HABBLE demo.">
 <link rel="canonical" href="https://habble.site/demos/shop/">
 <meta name="theme-color" content="#F2F7EF">
 <meta property="og:type" content="website">
 <meta property="og:title" content="FreshKart Daily — Grocery Store, Ernakulam">
-<meta property="og:description" content="Products and WhatsApp + UPI ordering, no commission. HABBLE demo for local shops.">
+<meta property="og:description" content="Products and email ordering, no commission. HABBLE demo for local shops.">
 <meta property="og:url" content="https://habble.site/demos/shop/">
 <meta property="og:image" content="https://habble.site/assets/img/demo-shop.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,10 +61,10 @@ footer{padding:24px 0 110px;color:var(--muted);font-size:.76rem;display:flex;jus
 </style>
 </head>
 <body>
-<p class="strip">Free delivery above <b>₹499</b> within 4 km · UPI on delivery · Open 7am – 10pm</p>
+<p class="strip">Free delivery above <b>₹499</b> within 4 km · Open 7am – 10pm</p>
 <div class="wrap">
 <nav class="nav"><span class="brand"><span class="logo">🛒</span> FreshKart Daily</span><label class="search">🔍 <input id="q" placeholder="Search atta, milk, soap…" oninput="filter()"></label><button class="cartbtn" onclick="send()">Cart · <span id="cc">0</span></button></nav>
-<header class="hero"><div><h1>Your street shop, <span>now on WhatsApp.</span></h1><p>No apps, no commission. Order below — we pack it and a boy brings it home in ~45 minutes.</p><div class="cta"><button class="btn btn-light" onclick="document.getElementById('grid').scrollIntoView({behavior:'smooth'})">Shop now →</button><a class="btn btn-ghost" href="tel:+910000000000">Call the shop</a></div></div><div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:18px;font-size:.85rem"><b>Today's deal</b><br>10% off cleaning essentials.<br>Code on WhatsApp: <b>FRESH10</b><br><br>⭐ 4.7 · 1,200+ families</div></header>
+<header class="hero"><div><h1>Your street shop, <span>now by email.</span></h1><p>No apps, no commission. Order below — we pack it and a boy brings it home in ~45 minutes.</p><div class="cta"><button class="btn btn-light" onclick="document.getElementById('grid').scrollIntoView({behavior:'smooth'})">Shop now →</button><a class="btn btn-ghost" href="tel:+910000000000">Call the shop</a></div></div><div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:18px;font-size:.85rem"><b>Today's deal</b><br>10% off cleaning essentials.<br>Code by email: <b>FRESH10</b><br><br>⭐ 4.7 · 1,200+ families</div></header>
 <nav class="chips"><button class="on" data-f="all">All</button><button data-f="staple">Staples</button><button data-f="dairy">Dairy</button><button data-f="fresh">Veg &amp; fruit</button><button data-f="home">Home</button></nav>
 <div class="grid" id="grid">
 <div class="prod" data-c="staple" data-n="Aashirvaad Atta 10kg"><span class="emoji">🌾</span><h3>Aashirvaad Atta 10kg</h3><small>Staple · 10 kg</small><div class="pr"><b>₹485</b><button class="addone" onclick="ch('Aashirvaad Atta 10kg',485,1,this)">Add +</button></div></div>
@@ -76,20 +76,20 @@ footer{padding:24px 0 110px;color:var(--muted);font-size:.76rem;display:flex;jus
 <div class="prod" data-c="home" data-n="Surf Excel 1kg"><span class="emoji">🧼</span><h3>Surf Excel 1kg</h3><small>Home</small><div class="pr"><b>₹118</b><button class="addone" onclick="ch('Surf Excel 1kg',118,1,this)">Add +</button></div></div>
 <div class="prod" data-c="home" data-n="Tata Salt 1kg"><span class="emoji">🧂</span><h3>Tata Salt 1kg</h3><small>Staple</small><div class="pr"><b>₹28</b><button class="addone" onclick="ch('Tata Salt 1kg',28,1,this)">Add +</button></div></div>
 </div>
-<div class="bar"><div><b id="tot">0 items · ₹0</b><div style="font-size:.75rem;opacity:.7">Pay by UPI on delivery · No minimum</div></div><button class="order" onclick="send()">Order on WhatsApp →</button></div>
-<div class="trust"><div><b>⏱ 45-min delivery</b>Within 4 km, 7am–9pm. Live status on WhatsApp.</div><div><b>💸 No commission prices</b>Shelf price = site price. Monthly list? Send once, repeat.</div><div><b>📍 Ernakulam</b>Convent Rd. Call +91 00000 00000 for bulk/rice bags.</div></div>
-<footer><span>© 2026 FreshKart Daily · Demo persona for illustration</span><span>Demo by HABBLE · Orders via WhatsApp + UPI</span></footer>
+<div class="bar"><div><b id="tot">0 items · ₹0</b><div style="font-size:.75rem;opacity:.7">Order by email · No minimum</div></div><button class="order" onclick="send()">Order by email →</button></div>
+<div class="trust"><div><b>⏱ 45-min delivery</b>Within 4 km, 7am–9pm. Live status by email.</div><div><b>💸 No commission prices</b>Shelf price = site price. Monthly list? Send once, repeat.</div><div><b>📍 Ernakulam</b>Convent Rd. Call +91 00000 00000 for bulk/rice bags.</div></div>
+<footer><span>© 2026 FreshKart Daily · Demo persona for illustration</span><span>Demo by HABBLE · Orders by email</span></footer>
 </div>
 <script>
 var cart={};
 function ch(n,p,d,btn){cart[n]=cart[n]||{q:0,p:p};cart[n].q+=d;if(cart[n].q<=0)delete cart[n];render();}
 function render(){var n=0,t=0;for(var k in cart){n+=cart[k].q;t+=cart[k].q*cart[k].p}document.getElementById('cc').textContent=n;document.getElementById('tot').textContent=n+' item'+(n===1?'':'s')+' · ₹'+t;}
-function send(){var k=Object.keys(cart);if(!k.length){alert('Cart is empty — add atta, milk or veggies first.');return}var lines=k.map(function(x){return '• '+x+' × '+cart[x].q+' (₹'+cart[x].q*cart[x].p+')'});var t=k.reduce(function(s,x){return s+cart[x].q*cart[x].p},0);window.open('https://wa.me/910000000000?text='+encodeURIComponent('Hi FreshKart! My order:\n'+lines.join('\n')+'\nTotal: ₹'+t+'\nName: \nAddress: '),'_blank');}
+function send(){var k=Object.keys(cart);if(!k.length){alert('Cart is empty — add atta, milk or veggies first.');return}var lines=k.map(function(x){return '• '+x+' × '+cart[x].q+' (₹'+cart[x].q*cart[x].p+')'});var t=k.reduce(function(s,x){return s+cart[x].q*cart[x].p},0);var body=encodeURIComponent('Hi FreshKart! My order:\n'+lines.join('\n')+'\nTotal: ₹'+t+'\nName: \nAddress: ');window.location.href='mailto:order@freshkart.example?subject='+encodeURIComponent('Grocery order')+'&body='+body;}
 function filter(){var q=document.getElementById('q').value.toLowerCase();document.querySelectorAll('.prod').forEach(function(p){p.style.display=p.dataset.n.toLowerCase().includes(q)?'flex':'none'})}
 document.querySelectorAll('.chips button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.chips button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');var f=b.dataset.f;document.querySelectorAll('.prod').forEach(function(p){p.style.display=(f==='all'||p.dataset.c===f)?'flex':'none'})})});
 </script>
 <!-- Made by HABBLE — backlink badge (keep on every demo) -->
-<a class="habble-badge" href="../../#examples" aria-label="Back to HABBLE demos">Made by HABBLE <span aria-hidden="true">→</span></a>
+<a class="habble-badge" href="../../demos.html" aria-label="Back to HABBLE demos">Made by HABBLE <span aria-hidden="true">→</span></a>
 <style>.habble-badge{position:fixed;right:16px;bottom:16px;z-index:9000;display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:100px;background:rgba(20,33,15,.92);color:#fff;font:500 12px/1.4 Inter,system-ui,sans-serif;text-decoration:none}</style>
 </body>
 </html>

@@ -4,12 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Lumière — Beauty & Hair Studio</title>
-<meta name="description" content="Boutique beauty studio — hair, skin, nails and bridal artistry with WhatsApp booking. HABBLE demo.">
+<meta name="description" content="Boutique beauty studio — hair, skin, nails and bridal artistry with email booking. HABBLE demo.">
 <link rel="canonical" href="https://habble.site/demos/salon/">
 <meta name="theme-color" content="#fdf6f0">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Lumière — Beauty & Hair Studio">
-<meta property="og:description" content="Packages, services and WhatsApp booking for a boutique beauty studio. HABBLE demo for salons.">
+<meta property="og:description" content="Packages, services and email booking for a boutique beauty studio. HABBLE demo for salons.">
 <meta property="og:url" content="https://habble.site/demos/salon/">
 <meta property="og:image" content="https://habble.site/assets/img/demo-salon.svg">
 <style>
@@ -287,12 +287,12 @@
     border: 1.5px solid var(--charcoal);
   }
   .btn-outline:hover { background: var(--charcoal); color: #fff; }
-  .btn-wa {
-    background: #25d366;
+  .btn-book {
+    background: var(--deep-rose);
     color: #fff;
-    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
   }
-  .btn-wa:hover { background: #1ebe5b; transform: translateY(-2px); }
+  .btn-book:hover { background: var(--gold); transform: translateY(-2px); }
 
   section { padding: 100px 24px; }
   .container { max-width: 1200px; margin: 0 auto; }
@@ -454,8 +454,8 @@
     font-family: -apple-system, sans-serif;
     font-size: 11px;
     letter-spacing: 1px;
-    background: rgba(37,211,102,0.12);
-    color: #1b8f4a;
+    background: rgba(201,162,75,0.16);
+    color: #a9822f;
     padding: 4px 10px;
     border-radius: 12px;
     margin-bottom: 22px;
@@ -879,8 +879,8 @@
     opacity: 0.9;
     position: relative;
   }
-  .cta-strip .btn-wa { background: #fff; color: var(--deep-rose); position: relative; }
-  .cta-strip .btn-wa:hover { background: var(--gold); color: #fff; }
+  .cta-strip .btn-book { background: #fff; color: var(--deep-rose); position: relative; }
+  .cta-strip .btn-book:hover { background: var(--gold); color: #fff; }
 
   /* ---------- Footer ---------- */
   footer {
@@ -918,46 +918,6 @@
     letter-spacing: 1px;
   }
 
-  /* ---------- Floating WhatsApp ---------- */
-  .wa-float {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    width: 62px;
-    height: 62px;
-    background: #25d366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 30px rgba(37,211,102,0.45);
-    z-index: 500;
-    transition: all 0.3s;
-    animation: wa-pulse 2.5s infinite;
-  }
-  .wa-float:hover { transform: scale(1.1); background: #1ebe5b; }
-  .wa-float svg { width: 34px; height: 34px; fill: #fff; }
-  @keyframes wa-pulse {
-    0% { box-shadow: 0 10px 30px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.6); }
-    70% { box-shadow: 0 10px 30px rgba(37,211,102,0.45), 0 0 0 18px rgba(37,211,102,0); }
-    100% { box-shadow: 0 10px 30px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0); }
-  }
-  .wa-float .tip {
-    position: absolute;
-    right: 74px;
-    background: var(--charcoal);
-    color: #fff;
-    font-size: 12px;
-    padding: 8px 14px;
-    border-radius: 8px;
-    white-space: nowrap;
-    font-family: -apple-system, sans-serif;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-  }
-  .wa-float:hover .tip { opacity: 1; }
-
   /* ---------- Sticky mobile booking bar ---------- */
   .sticky-book {
     position: fixed;
@@ -990,7 +950,6 @@
     .pkg.featured:hover { transform: translateY(-10px) scale(1); }
     .testi { min-width: 300px; }
     .sticky-book { display: flex; }
-    .wa-float { bottom: 88px; }
   }
   @media (max-width: 480px) {
     .hero { min-height: 80vh; }
@@ -1016,7 +975,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="https://wa.me/916238712579?text=Hi%20Lumi%C3%A8re%2C%20I%20want%20to%20book%20an%20appointment" target="_blank" class="book-btn">Book Now</a></li>
+    <li><a href="mailto:book@lumiere.example?subject=Appointment%20request" class="book-btn">Book Now</a></li>
   </ul>
 </nav>
 
@@ -1031,11 +990,11 @@
   <div class="hero-inner">
     <div class="eyebrow">Beauty · Hair · Wellness</div>
     <h1>Where every <em>woman</em><br/>feels like a masterpiece.</h1>
-    <p>A boutique beauty studio crafted for you — hair, skin, nails, and bridal artistry. Book in seconds on WhatsApp.</p>
+    <p>A boutique beauty studio crafted for you — hair, skin, nails, and bridal artistry. Book in seconds by email.</p>
     <div class="cta-row">
-      <a class="btn btn-wa" href="https://wa.me/916238712579?text=Hi%20Lumi%C3%A8re%2C%20I%20want%20to%20book%20an%20appointment" target="_blank">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.58zM12.05 18.5h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.49.65.66-2.43-.16-.25a6.6 6.6 0 1 1 5.6 3.09zM12.05 18.5h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.49.65.66-2.43-.16-.25a6.6 6.6 0 1 1 5.6 3.09zm3.62-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.2-.5.64-.61.77-.11.13-.22.15-.42.05-.2-.1-.84-.31-1.6-.99-.59-.53-.99-1.18-1.1-1.38-.11-.2-.01-.31.09-.41.09-.09.2-.22.3-.33.1-.11.13-.2.2-.33.07-.13.03-.25-.02-.35-.05-.1-.44-1.07-.61-1.46-.16-.38-.32-.33-.44-.34-.11-.01-.24-.01-.37-.01-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.66 0 .98.72 1.93.82 2.06.1.13 1.41 2.16 3.42 3.03.48.21.85.33 1.14.42.48.15.92.13 1.27.08.39-.06 1.17-.48 1.34-.94.16-.46.16-.86.11-.94-.05-.08-.18-.13-.38-.23z"/></svg>
-        Book on WhatsApp
+      <a class="btn btn-book" href="mailto:book@lumiere.example?subject=Appointment%20request">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        Book by email
       </a>
       <a class="btn btn-outline" href="#packages">See Packages</a>
     </div>
@@ -1079,7 +1038,7 @@
           <li>On-location service available</li>
           <li>Complimentary touch-up kit</li>
         </ul>
-        <a class="btn btn-wa" href="https://wa.me/916238712579?text=Hi%2C%20I%27m%20interested%20in%20the%20Bridal%20Bliss%20package" target="_blank">Book This Package</a>
+        <a class="btn btn-book" href="mailto:book@lumiere.example?subject=Bridal%20Bliss%20package" target="_blank">Book This Package</a>
       </div>
 
       <div class="pkg reveal d2" data-cat="glow">
@@ -1094,7 +1053,7 @@
           <li>Signature head massage</li>
           <li>Complimentary nail polish</li>
         </ul>
-        <a class="btn btn-primary" href="https://wa.me/916238712579?text=Hi%2C%20I%27m%20interested%20in%20the%20Radiance%20Ritual%20package" target="_blank">Book This Package</a>
+        <a class="btn btn-primary" href="mailto:book@lumiere.example?subject=Radiance%20Ritual%20package" target="_blank">Book This Package</a>
       </div>
 
       <div class="pkg reveal d3" data-cat="pamper">
@@ -1109,7 +1068,7 @@
           <li>Full-face cleanup + mask</li>
           <li>Relaxing shoulder massage</li>
         </ul>
-        <a class="btn btn-primary" href="https://wa.me/916238712579?text=Hi%2C%20I%27m%20interested%20in%20the%20Queen%20for%20a%20Day%20package" target="_blank">Book This Package</a>
+        <a class="btn btn-primary" href="mailto:book@lumiere.example?subject=Queen%20for%20a%20Day%20package" target="_blank">Book This Package</a>
       </div>
 
       <div class="pkg reveal d1" data-cat="bridal">
@@ -1124,7 +1083,7 @@
           <li>Basic jewellery setting</li>
           <li>Complimentary nail paint</li>
         </ul>
-        <a class="btn btn-primary" href="https://wa.me/916238712579?text=Hi%2C%20I%27m%20interested%20in%20the%20Engagement%20Elegance%20package" target="_blank">Book This Package</a>
+        <a class="btn btn-primary" href="mailto:book@lumiere.example?subject=Engagement%20Elegance%20package" target="_blank">Book This Package</a>
       </div>
 
       <div class="pkg reveal d2" data-cat="glow">
@@ -1138,7 +1097,7 @@
           <li>Threading (eyebrow + upper lip)</li>
           <li>Blow-dry styling</li>
         </ul>
-        <a class="btn btn-primary" href="https://wa.me/916238712579?text=Hi%2C%20I%27m%20interested%20in%20the%20Weekend%20Glow%20package" target="_blank">Book This Package</a>
+        <a class="btn btn-primary" href="mailto:book@lumiere.example?subject=Weekend%20Glow%20package" target="_blank">Book This Package</a>
       </div>
 
       <div class="pkg reveal d3" data-cat="pamper">
@@ -1153,7 +1112,7 @@
           <li>Hair oil treatment</li>
           <li>Green tea &amp; refreshments</li>
         </ul>
-        <a class="btn btn-primary" href="https://wa.me/916238712579?text=Hi%2C%20I%27m%20interested%20in%20the%20Herbal%20Retreat%20package" target="_blank">Book This Package</a>
+        <a class="btn btn-primary" href="mailto:book@lumiere.example?subject=Herbal%20Retreat%20package" target="_blank">Book This Package</a>
       </div>
 
     </div>
@@ -1178,7 +1137,7 @@
           <h3>Hair Styling & Color</h3>
           <p>Cuts, balayage, keratin, and blowouts by senior stylists.</p>
           <div class="dur">⏱ 60–120 min</div><br/>
-          <a class="book-mini" href="https://wa.me/916238712579?text=Hi%2C%20I%20want%20to%20book%20Hair%20Styling%20%26%20Color" target="_blank">Book this →</a>
+          <a class="book-mini" href="mailto:book@lumiere.example?subject=Hair%20Styling%20%26%20Color">Book this →</a>
         </div>
       </div>
 
@@ -1190,7 +1149,7 @@
           <h3>Skin & Facial</h3>
           <p>Glow facials, hydra-facial, acne care, and bridal skin prep.</p>
           <div class="dur">⏱ 45–90 min</div><br/>
-          <a class="book-mini" href="https://wa.me/916238712579?text=Hi%2C%20I%20want%20to%20book%20a%20Facial" target="_blank">Book this →</a>
+          <a class="book-mini" href="mailto:book@lumiere.example?subject=Facial%20booking">Book this →</a>
         </div>
       </div>
 
@@ -1202,7 +1161,7 @@
           <h3>Nails & Manicure</h3>
           <p>Gel, extensions, nail art, and luxurious spa manicures.</p>
           <div class="dur">⏱ 45–90 min</div><br/>
-          <a class="book-mini" href="https://wa.me/916238712579?text=Hi%2C%20I%20want%20to%20book%20Nails%20%26%20Manicure" target="_blank">Book this →</a>
+          <a class="book-mini" href="mailto:book@lumiere.example?subject=Nails%20%26%20Manicure">Book this →</a>
         </div>
       </div>
 
@@ -1214,7 +1173,7 @@
           <h3>Bridal Makeup</h3>
           <p>HD & airbrush bridal packages with trial session included.</p>
           <div class="dur">⏱ 3–4 hrs</div><br/>
-          <a class="book-mini" href="https://wa.me/916238712579?text=Hi%2C%20I%20want%20to%20enquire%20about%20Bridal%20Makeup" target="_blank">Enquire →</a>
+          <a class="book-mini" href="mailto:book@lumiere.example?subject=Bridal%20Makeup%20enquiry">Enquire →</a>
         </div>
       </div>
 
@@ -1296,7 +1255,7 @@
       <div class="booking-img reveal"></div>
       <div class="booking-form reveal d2">
         <h3>Book your slot</h3>
-        <p class="sub">Fill this in — we'll confirm instantly on WhatsApp.</p>
+        <p class="sub">Fill this in — we'll confirm by email.</p>
         <div class="field">
           <label>Your Name</label>
           <input type="text" id="bName" placeholder="e.g. Ananya" />
@@ -1324,9 +1283,9 @@
           <label>Preferred Time</label>
           <input type="time" id="bTime" />
         </div>
-        <button class="btn btn-wa" onclick="bookOnWhatsApp()">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.58zM12.05 18.5h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.49.65.66-2.43-.16-.25a6.6 6.6 0 1 1 5.6 3.09z"/></svg>
-          Confirm on WhatsApp
+        <button class="btn btn-book" onclick="bookByEmail()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          Confirm by email
         </button>
         <p class="note">Or message us directly — replies within minutes.</p>
       </div>
@@ -1361,7 +1320,7 @@
         </div>
         <div class="testi">
           <div class="stars">★★★★★</div>
-          <p>The cleanliness and attention to detail is unmatched. Booking on WhatsApp took me literally 30 seconds. Loved every minute.</p>
+          <p>The cleanliness and attention to detail is unmatched. Booking by email took me literally 30 seconds. Loved every minute.</p>
           <div class="who">
             <div class="av" style="background-image:url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80')"></div>
             <div><div class="name">Riya Sharma</div><div class="role">Facial & Nails</div></div>
@@ -1387,10 +1346,10 @@
 <!-- ======================= CTA STRIP ======================= -->
 <div class="cta-strip">
   <h2>Ready for your glow-up?</h2>
-  <p>Message us on WhatsApp and lock your slot today.</p>
-  <a class="btn btn-wa" href="https://wa.me/916238712579?text=Hi%20Lumi%C3%A8re%2C%20I%20want%20to%20book%20an%20appointment" target="_blank">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.58zM12.05 18.5h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.49.65.66-2.43-.16-.25a6.6 6.6 0 1 1 5.6 3.09z"/></svg>
-    Chat on WhatsApp
+  <p>Email us and lock your slot today.</p>
+  <a class="btn btn-book" href="mailto:book@lumiere.example?subject=Appointment%20request">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+    Email us
   </a>
 </div>
 
@@ -1400,21 +1359,15 @@
   <div class="info">
     <span>📍 Kochi, Kerala</span>
     <span>🕐 Mon–Sun · 9am – 9pm</span>
-    <a href="https://wa.me/916238712579" target="_blank">📞 +91 62387 12579</a>
+    <a href="mailto:book@lumiere.example">✉ book@lumiere.example</a>
   </div>
   <div class="copy">© 2026 Lumière Beauty Studio · Mockup Demo — Placeholder Data</div>
 </footer>
 
-<!-- Floating WhatsApp -->
-<a class="wa-float" href="https://wa.me/916238712579?text=Hi%20Lumi%C3%A8re%2C%20I%20want%20to%20book%20an%20appointment" target="_blank" aria-label="WhatsApp">
-  <span class="tip">Chat with us</span>
-  <svg viewBox="0 0 24 24"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.58zM12.05 18.5h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.49.65.66-2.43-.16-.25a6.6 6.6 0 1 1 5.6 3.09zm3.62-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.2-.5.64-.61.77-.11.13-.22.15-.42.05-.2-.1-.84-.31-1.6-.99-.59-.53-.99-1.18-1.1-1.38-.11-.2-.01-.31.09-.41.09-.09.2-.22.3-.33.1-.11.13-.2.2-.33.07-.13.03-.25-.02-.35-.05-.1-.44-1.07-.61-1.46-.16-.38-.32-.33-.44-.34-.11-.01-.24-.01-.37-.01-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.66 0 .98.72 1.93.82 2.06.1.13 1.41 2.16 3.42 3.03.48.21.85.33 1.14.42.48.15.92.13 1.27.08.39-.06 1.17-.48 1.34-.94.16-.46.16-.86.11-.94-.05-.08-.18-.13-.38-.23z"/></svg>
-</a>
-
 <!-- Sticky mobile book bar -->
 <div class="sticky-book" id="stickyBook">
   <div class="info">✦ <strong>Save up to 35%</strong> on packages</div>
-  <a class="btn btn-wa" href="https://wa.me/916238712579?text=Hi%20Lumi%C3%A8re%2C%20I%20want%20to%20book%20an%20appointment" target="_blank">Book</a>
+  <a class="btn btn-book" href="mailto:book@lumiere.example?subject=Appointment%20request">Book</a>
 </div>
 
 <script>
@@ -1561,9 +1514,9 @@ const stickyObs = new IntersectionObserver((entries) => {
 stickyObs.observe(heroEl);
 
 /* ============================================================
-   BOOK ON WHATSAPP
+   BOOK BY EMAIL
 ============================================================ */
-function bookOnWhatsApp() {
+function bookByEmail() {
   const name = document.getElementById('bName').value.trim();
   const service = document.getElementById('bService').value;
   const date = document.getElementById('bDate').value;
@@ -1574,14 +1527,14 @@ function bookOnWhatsApp() {
   if (!time) { alert('Please pick a time.'); return; }
 
   const msg =
-    `Hi Lumière ✨%0A` +
-    `I would like to book an appointment.%0A%0A` +
-    `👤 Name: ${encodeURIComponent(name)}%0A` +
-    `💅 Service: ${encodeURIComponent(service)}%0A` +
-    `📅 Date: ${encodeURIComponent(date)}%0A` +
-    `🕐 Time: ${encodeURIComponent(time)}`;
+    `Hi Lumière,\n` +
+    `I would like to book an appointment.\n\n` +
+    `Name: ${name}\n` +
+    `Service: ${service}\n` +
+    `Date: ${date}\n` +
+    `Time: ${time}`;
 
-  window.open(`https://wa.me/916238712579?text=${msg}`, '_blank');
+  window.location.href = `mailto:book@lumiere.example?subject=${encodeURIComponent('Appointment request')}&body=${encodeURIComponent(msg)}`;
 }
 
 /* Smooth scroll */

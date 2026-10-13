@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CityCare Clinic — General & Dental, Thrissur | Demo</title>
-<meta name="description" content="Family clinic in Thrissur. Doctor timings, treatments and WhatsApp appointments. HABBLE demo.">
+<meta name="description" content="Family clinic in Thrissur. Doctor timings, treatments and email appointments. HABBLE demo.">
 <link rel="canonical" href="https://habble.site/demos/clinic/">
 <meta name="theme-color" content="#EFF6F6">
 <meta property="og:type" content="website">
 <meta property="og:title" content="CityCare Clinic — General & Dental, Thrissur">
-<meta property="og:description" content="Doctor timings and WhatsApp appointments. HABBLE demo for clinics.">
+<meta property="og:description" content="Doctor timings and email appointments. HABBLE demo for clinics.">
 <meta property="og:url" content="https://habble.site/demos/clinic/">
 <meta property="og:image" content="https://habble.site/assets/img/demo-clinic.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,8 +64,8 @@ footer{padding:28px 0 90px;color:var(--muted);font-size:.78rem;display:flex;just
 <div class="wrap">
 <nav class="nav"><span class="brand"><span class="cross">+</span> CityCare Clinic</span><div class="links"><a href="#doctors">Doctors</a><a href="#timings">Timings</a><a href="#faq">FAQ</a></div><a class="btn btn-teal" href="#book">Book visit</a></nav>
 <header class="hero">
-<div class="hero-copy"><span class="badge"><i></i>Walk-ins + appointments</span><h1>Family doctor, <span>without the waiting hall.</span></h1><p>General, dental and child care under one roof in Thrissur. Check timings, take a token on WhatsApp, walk in at your slot.</p><div class="cta"><a class="btn btn-teal" href="#book">Get a token →</a><a class="btn btn-white" href="#timings">Today's timings</a></div><div class="proof"><span><b>15+ yrs</b>serving Thrissur</span><span><b>~20 min</b>avg. wait with token</span><span><b>₹300</b>consultation</span></div></div>
-<form class="appt" id="book" onsubmit="return bookToken(event)"><h2>Book in 20 seconds</h2><p>No app. No signup. We reply with your token number.</p><div><label for="dept">Department</label><select id="dept"><option>General Medicine</option><option>Dental</option><option>Paediatrics</option><option>Skin</option></select></div><div><label for="day">When</label><select id="day"><option>Today</option><option>Tomorrow</option><option>Day after</option></select></div><div><label for="name">Your name</label><input id="name" required placeholder="e.g. Remya S"></div><button class="btn btn-teal" type="submit">Request token on WhatsApp</button><p style="font-size:.75rem">Or call reception: +91 00000 00000 · 9am–8pm</p></form>
+<div class="hero-copy"><span class="badge"><i></i>Walk-ins + appointments</span><h1>Family doctor, <span>without the waiting hall.</span></h1><p>General, dental and child care under one roof in Thrissur. Check timings, request a token by email, walk in at your slot.</p><div class="cta"><a class="btn btn-teal" href="#book">Get a token →</a><a class="btn btn-white" href="#timings">Today's timings</a></div><div class="proof"><span><b>15+ yrs</b>serving Thrissur</span><span><b>~20 min</b>avg. wait with token</span><span><b>₹300</b>consultation</span></div></div>
+<form class="appt" id="book" onsubmit="return bookToken(event)"><h2>Book in 20 seconds</h2><p>No app. No signup. We reply with your token number.</p><div><label for="dept">Department</label><select id="dept"><option>General Medicine</option><option>Dental</option><option>Paediatrics</option><option>Skin</option></select></div><div><label for="day">When</label><select id="day"><option>Today</option><option>Tomorrow</option><option>Day after</option></select></div><div><label for="name">Your name</label><input id="name" required placeholder="e.g. Remya S"></div><button class="btn btn-teal" type="submit">Request token by email</button><p style="font-size:.75rem">Or call reception: +91 00000 00000 · 9am–8pm</p></form>
 </header>
 <h2 class="sec" id="doctors">Doctors you will actually meet</h2><p class="sub">Same doctors every week. No rotation surprises.</p>
 <div class="grid3">
@@ -75,17 +75,17 @@ footer{padding:28px 0 90px;color:var(--muted);font-size:.78rem;display:flex;just
 </div>
 <div class="split" id="timings">
 <div class="card"><h3>Today's OPD</h3><table><tr><td>General</td><td>10–1 · 5–8</td></tr><tr><td>Dental</td><td>11–2 · 4–7</td></tr><tr><td>Lab + Pharmacy</td><td>9–8</td></tr><tr><td>Sunday</td><td>10–12 (general only)</td></tr></table></div>
-<div class="card"><h3>How a visit works</h3><p>1. Token on WhatsApp → 2. Walk in 10 min early → 3. Consult (₹300) → 4. Medicines downstairs. Reports on WhatsApp next day.</p><div class="cta"><a class="btn btn-white" href="https://maps.google.com/?q=Thrissur" target="_blank" rel="noopener">Get directions</a></div></div>
+<div class="card"><h3>How a visit works</h3><p>1. Token by email → 2. Walk in 10 min early → 3. Consult (₹300) → 4. Medicines downstairs. Reports emailed the next day.</p><div class="cta"><a class="btn btn-white" href="https://maps.google.com/?q=Thrissur" target="_blank" rel="noopener">Get directions</a></div></div>
 </div>
 <h2 class="sec" id="faq">Quick answers</h2>
-<div class="faq"><details open><summary>Do I need an appointment?</summary><p>No. Walk in any time — but a WhatsApp token cuts waiting to ~20 minutes.</p></details><details><summary>What are the charges?</summary><p>₹300 general, ₹400 specialist. Procedures quoted in writing before treatment.</p></details><details><summary>Do you do home visits?</summary><p>Yes, within 5 km for elderly patients. Call before 12 noon.</p></details></div>
-<footer><span>© 2026 CityCare Clinic · Demo persona for illustration</span><span>Demo by HABBLE · Tokens via WhatsApp</span></footer>
+<div class="faq"><details open><summary>Do I need an appointment?</summary><p>No. Walk in any time — but an emailed token cuts waiting to ~20 minutes.</p></details><details><summary>What are the charges?</summary><p>₹300 general, ₹400 specialist. Procedures quoted in writing before treatment.</p></details><details><summary>Do you do home visits?</summary><p>Yes, within 5 km for elderly patients. Call before 12 noon.</p></details></div>
+<footer><span>© 2026 CityCare Clinic · Demo persona for illustration</span><span>Demo by HABBLE · Tokens by email</span></footer>
 </div>
 <script>
-function bookToken(e){e.preventDefault();var d=document.getElementById('dept').value,day=document.getElementById('day').value,n=document.getElementById('name').value.trim()||'Patient';var m='Hi CityCare! I need a token. '+d+' | '+day+' | Name: '+n;window.open('https://wa.me/910000000000?text='+encodeURIComponent(m),'_blank');return false;}
+function bookToken(e){e.preventDefault();var d=document.getElementById('dept').value,day=document.getElementById('day').value,n=document.getElementById('name').value.trim()||'Patient';var m='Hi CityCare! I need a token. '+d+' | '+day+' | Name: '+n;window.location.href='mailto:care@citycare.example?subject='+encodeURIComponent('Token request')+'&body='+encodeURIComponent(m);return false;}
 </script>
 <!-- Made by HABBLE — backlink badge (keep on every demo) -->
-<a class="habble-badge" href="../../#examples" aria-label="Back to HABBLE demos">Made by HABBLE <span aria-hidden="true">→</span></a>
+<a class="habble-badge" href="../../demos.html" aria-label="Back to HABBLE demos">Made by HABBLE <span aria-hidden="true">→</span></a>
 <style>.habble-badge{position:fixed;right:16px;bottom:16px;z-index:9000;display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:100px;background:rgba(12,14,19,.88);color:#fff;font:500 12px/1.4 Inter,system-ui,sans-serif;text-decoration:none;border:1px solid rgba(255,255,255,.14)}</style>
 </body>
 </html>

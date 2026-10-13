@@ -1,10 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="HABBLE — one link for your CV, Instagram and clients">
-  <rect width="1200" height="630" fill="#0c0e13"/>
-  <g font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
-    <text x="80" y="150" fill="#7b8393" font-size="22" letter-spacing="6">HABBLE</text>
-    <text x="80" y="255" fill="#fbfbfc" font-size="66" font-weight="700">One link for your CV,</text>
-    <text x="80" y="335" fill="#fbfbfc" font-size="66" font-weight="700">Instagram and clients.</text>
-    <text x="80" y="425" fill="#9db0ff" font-size="36">Starter from ₹1,999 · targeted in 48 hours</text>
-    <text x="80" y="480" fill="#7b8393" font-size="26">Kerala · serving clients across India · pay after your written scope</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="HABBLE — Your Business Deserves a Better Website">
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+  <g font-family="Manrope, Segoe UI, Helvetica, Arial, sans-serif">
+    <rect x="80" y="120" width="64" height="64" rx="16" fill="#103F35"/>
+    <path d="M99 137h7v12h24v-12h7v30h-7v-12h-24v12h-7z" fill="#FFFFFF"/>
+    <text x="164" y="166" fill="#103F35" font-size="30" font-weight="700" letter-spacing="6">HABBLE</text>
+    <text x="80" y="300" fill="#0B332B" font-size="64" font-weight="800">Your Business Deserves</text>
+    <text x="80" y="378" fill="#0B332B" font-size="64" font-weight="800">a Better Website.</text>
+    <text x="80" y="460" fill="#1E5C44" font-size="36" font-weight="600">Custom websites for local businesses · From ₹2,999</text>
+    <text x="80" y="512" fill="#52635B" font-size="26">Kerala · serving businesses across India · written scope &amp; quote</text>
   </g>
 </svg>

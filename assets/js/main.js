@@ -5,27 +5,6 @@
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* theme: light default, toggle in hero, remembered */
-  var themeMeta = document.querySelector('meta[name="theme-color"]');
-  function paintTheme(t) {
-    if (t === 'dark') document.documentElement.dataset.theme = 'dark';
-    else document.documentElement.removeAttribute('data-theme');
-    $$('[data-theme-set]').forEach(function (b) {
-      b.setAttribute('aria-pressed', String(b.getAttribute('data-theme-set') === t));
-    });
-    if (themeMeta) themeMeta.setAttribute('content', t === 'dark' ? '#0d0d10' : '#faf9f5');
-  }
-  var saved = null;
-  try { saved = localStorage.getItem('habble-theme'); } catch (e) { saved = null; }
-  paintTheme(saved === 'dark' ? 'dark' : 'light');
-  $$('[data-theme-set]').forEach(function (b) {
-    b.addEventListener('click', function () {
-      var t = b.getAttribute('data-theme-set');
-      try { localStorage.setItem('habble-theme', t); } catch (e) { /* private mode */ }
-      paintTheme(t);
-    });
-  });
-
   /* sticky header + active nav */
   var head = $('.site-head');
   var links = $$('.nav-list a');

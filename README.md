@@ -73,7 +73,7 @@ appear in several places, and each occurrence in the HTML carries an
 
 | What | Where | Current value |
 | --- | --- | --- |
-| WhatsApp number | every `wa.me/` link, `tel:` link | `+91 62387 12579` / `916238712579` |
+| WhatsApp number | every `wa.me/` link | `916238712579` |
 | UPI ID | pricing links, contact card, `main.js` `CONTACT.upi` | `ajlanhabble@upi` |
 | Instagram handle | contact card | `@habble.studio` |
 | Email address | contact card, footer, terms, privacy | `ajlanabduljlaeel@gmail.com` |
@@ -154,8 +154,7 @@ was no way to know it ever arrived, so it quietly lost enquiries. The four
 channels below are the whole contact method, and each one works with JavaScript
 disabled:
 
-- WhatsApp `+91 62387 12579` (primary, every CTA on the page)
-- Phone `tel:+916238712579`
+- WhatsApp `916238712579` (primary, every CTA on the page)
 - Instagram `@habble.studio`
 - Email `ajlanabduljlaeel@gmail.com`
 

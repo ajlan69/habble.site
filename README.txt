@@ -9,7 +9,7 @@ How to use:
 
 Brand and contact details:
 - Name: HABBLE
-- WhatsApp: +91 62387 12579  (link uses wa.me/916238712579)
+- WhatsApp: 916238712579  (link uses wa.me/916238712579)
 - Email: ajlanabduljlaeel@gmail.com
 
 Notes:

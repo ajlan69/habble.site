@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thalassery Table — Kerala Kitchen, Kozhikode | Demo</title>
-<meta name="description" content="Kerala restaurant in Kozhikode. Table-QR menu with order-over-WhatsApp. HABBLE demo.">
+<meta name="description" content="Kerala restaurant in Kozhikode. Table-QR menu with order-by-email. HABBLE demo.">
 <link rel="canonical" href="https://habble.site/demos/restaurant/">
 <meta name="theme-color" content="#171208">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Thalassery Table — Kerala Kitchen, Kozhikode">
-<meta property="og:description" content="Scan, pick, order on WhatsApp. HABBLE demo for restaurants.">
+<meta property="og:description" content="Scan, pick, order by email. HABBLE demo for restaurants.">
 <meta property="og:url" content="https://habble.site/demos/restaurant/">
 <meta property="og:image" content="https://habble.site/assets/img/demo-restaurant.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,7 +57,7 @@ footer{padding:26px 0 110px;color:var(--muted);font-size:.76rem;display:flex;jus
 <p class="top">📍 Kozhikode · Open 11am – 11pm · Table QR menu — no app needed</p>
 <div class="wrap">
 <nav class="nav"><span class="brand">Thalassery <em>Table</em></span><span class="pill">Table No. 7 · scan-to-order demo</span></nav>
-<header class="hero"><h1>Sadhya soul, <em>served fast.</em></h1><p>Pick below, tap <b style="color:#fff">Add</b>, then send the whole order to our kitchen on WhatsApp. Pay at the table by UPI.</p><div class="meta"><span>⭐ 4.6 · 2,000+ reviews</span><span>🛵 Swiggy + direct</span><span>🌱 Veg + non-veg</span></div></header>
+<header class="hero"><h1>Sadhya soul, <em>served fast.</em></h1><p>Pick below, tap <b style="color:#fff">Add</b>, then email the whole order to our kitchen. Order from your own phone at the table.</p><div class="meta"><span>⭐ 4.6 · 2,000+ reviews</span><span>🛵 Swiggy + direct</span><span>🌱 Veg + non-veg</span></div></header>
 <nav class="cats" aria-label="Menu categories"><button class="on" data-f="all">All</button><button data-f="meals">Meals</button><button data-f="biryani">Biryani</button><button data-f="snacks">Snacks</button><button data-f="drinks">Drinks</button></nav>
 <div class="menu" id="menu">
 <div class="dish" data-c="meals"><div><h3><span class="dot veg"></span>Kerala meals</h3><p>Rice, sambar, avial, thoran, pickle, pappadam.</p><button class="add" data-n="Kerala meals" data-p="120">Add · ₹120</button></div><span class="price">₹120</span></div>
@@ -69,19 +69,19 @@ footer{padding:26px 0 110px;color:var(--muted);font-size:.76rem;display:flex;jus
 <div class="dish" data-c="drinks"><div><h3><span class="dot veg"></span>Sulaimani (2)</h3><p>Black tea, lemon, mint after biryani.</p><button class="add" data-n="Sulaimani" data-p="40">Add · ₹40</button></div><span class="price">₹40</span></div>
 <div class="dish" data-c="drinks"><div><h3><span class="dot veg"></span>Tender coconut payasam</h3><p>Our dessert. Ask for it chilled.</p><button class="add" data-n="Payasam" data-p="90">Add · ₹90</button></div><span class="price">₹90</span></div>
 </div>
-<div class="bar"><div><b id="count">0 items · ₹0</b><small>Table 7 · order goes to kitchen WhatsApp</small></div><button class="order" onclick="sendOrder()">Send order →</button></div>
-<div class="info"><div><b>Hours</b>11am–3:30pm meals<br>4–11pm full menu</div><div><b>Bulk &amp; party</b>Sadhya from ₹150/plate.<br><a href="https://wa.me/910000000000" style="color:var(--amber2)">Quote on WhatsApp →</a></div><div><b>Find us</b>SM Street, Kozhikode<br><a href="tel:+910000000000" style="color:var(--amber2)">Call the counter →</a></div></div>
-<footer><span>© 2026 Thalassery Table · Demo persona for illustration</span><span>Demo by HABBLE · Orders via WhatsApp</span></footer>
+<div class="bar"><div><b id="count">0 items · ₹0</b><small>Table 7 · order goes to the kitchen by email</small></div><button class="order" onclick="sendOrder()">Send order →</button></div>
+<div class="info"><div><b>Hours</b>11am–3:30pm meals<br>4–11pm full menu</div><div><b>Bulk &amp; party</b>Sadhya from ₹150/plate.<br><a href="mailto:table@thalasserytable.example?subject=Quote%20request" style="color:var(--amber2)">Email for a quote →</a></div><div><b>Find us</b>SM Street, Kozhikode<br><a href="tel:+910000000000" style="color:var(--amber2)">Call the counter →</a></div></div>
+<footer><span>© 2026 Thalassery Table · Demo persona for illustration</span><span>Demo by HABBLE · Orders by email</span></footer>
 </div>
 <script>
 var cart={};
 document.querySelectorAll('.add').forEach(function(b){b.addEventListener('click',function(){var n=b.dataset.n,p=+b.dataset.p;cart[n]=cart[n]||{q:0,p:p};cart[n].q++;b.classList.add('in');b.textContent='Added × '+cart[n].q;render();})});
 document.querySelectorAll('.cats button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.cats button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');var f=b.dataset.f;document.querySelectorAll('.dish').forEach(function(d){d.style.display=(f==='all'||d.dataset.c===f)?'flex':'none'})})});
 function render(){var n=0,t=0;for(var k in cart){n+=cart[k].q;t+=cart[k].q*cart[k].p}document.getElementById('count').textContent=n+' item'+(n===1?'':'s')+' · ₹'+t;}
-function sendOrder(){var keys=Object.keys(cart);if(!keys.length){alert('Add something first — try the biryani.');return}var lines=keys.map(function(k){return '• '+k+' × '+cart[k].q+' (₹'+(cart[k].q*cart[k].p)+')'});var total=keys.reduce(function(s,k){return s+cart[k].q*cart[k].p},0);window.open('https://wa.me/910000000000?text='+encodeURIComponent('Hi! Table 7 order:\n'+lines.join('\n')+'\nTotal: ₹'+total),'_blank');}
+function sendOrder(){var keys=Object.keys(cart);if(!keys.length){alert('Add something first — try the biryani.');return}var lines=keys.map(function(k){return '• '+k+' × '+cart[k].q+' (₹'+(cart[k].q*cart[k].p)+')'});var total=keys.reduce(function(s,k){return s+cart[k].q*cart[k].p},0);var body=encodeURIComponent('Hi! Table 7 order:\n'+lines.join('\n')+'\nTotal: ₹'+total);window.location.href='mailto:table@thalasserytable.example?subject='+encodeURIComponent('Table 7 order')+'&body='+body;}
 </script>
 <!-- Made by HABBLE — backlink badge (keep on every demo) -->
-<a class="habble-badge" href="../../#examples" aria-label="Back to HABBLE demos">Made by HABBLE <span aria-hidden="true">→</span></a>
+<a class="habble-badge" href="../../demos.html" aria-label="Back to HABBLE demos">Made by HABBLE <span aria-hidden="true">→</span></a>
 <style>.habble-badge{position:fixed;right:16px;bottom:16px;z-index:9000;display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:100px;background:rgba(255,247,232,.94);color:#231603;font:600 12px/1.4 Inter,system-ui,sans-serif;text-decoration:none;border:1px solid rgba(0,0,0,.1)}</style>
 </body>
 </html>
